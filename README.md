@@ -1,2 +1,2 @@
-# php-coding-style
-PHP Coding Style
+VanCodX PHP Coding Style
+========================
