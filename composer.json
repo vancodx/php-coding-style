@@ -20,6 +20,11 @@
     "friendsofphp/php-cs-fixer": "^3.65.0",
     "squizlabs/php_codesniffer": "^3.11.1"
   },
+  "scripts": {
+    "test": [
+      "php-cs-fixer fix"
+    ]
+  },
   "config": {
     "sort-packages": true
   }
