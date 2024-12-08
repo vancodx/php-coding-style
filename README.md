@@ -23,7 +23,7 @@ $finder = (new Finder())->in(__DIR__);
 return ConfigCreator::create()->setFinder($finder);
 ```
 
-Add the following lines into "composer.json" file of your project.
+Add the following lines into "composer.json" file of your project:
 
 ```
   "scripts": {
