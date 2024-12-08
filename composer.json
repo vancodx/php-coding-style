@@ -1,0 +1,31 @@
+{
+  "name": "vancodx/php-coding-style",
+  "description": "VanCodX PHP Coding Style",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Chistyakov",
+      "email": "vancodx@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "VanCodX\\CodingStyle\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.3",
+    "friendsofphp/php-cs-fixer": "^3.65.0",
+    "squizlabs/php_codesniffer": "^3.11.1"
+  },
+  "scripts": {
+    "test": [
+      "php-cs-fixer fix"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
