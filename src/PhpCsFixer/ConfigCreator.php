@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace VanCodX\CodingStyle\PhpCsFixer;
 
@@ -15,6 +13,7 @@ class ConfigCreator
     {
         $config = new Config();
         $config->setRules(RuleSet::getRules());
+        $config->setRiskyAllowed(true);
         return $config;
     }
 }

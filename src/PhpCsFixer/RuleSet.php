@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace VanCodX\CodingStyle\PhpCsFixer;
 
@@ -12,7 +10,9 @@ class RuleSet
     public static function getRules(): array
     {
         return [
-            '@PSR12' => true
+            '@PSR12' => true,
+            'blank_line_after_opening_tag' => false,
+            'declare_strict_types' => true
         ];
     }
 }
