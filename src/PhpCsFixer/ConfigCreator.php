@@ -6,9 +6,6 @@ use PhpCsFixer\Config;
 
 class ConfigCreator
 {
-    /**
-     * @return Config
-     */
     public static function create(): Config
     {
         $config = new Config();
