@@ -13,14 +13,13 @@ composer require --dev vancodx/php-coding-style
 Create ".php-cs-fixer.dist.php" file in the root directory of your project with the following contents:
 
 ```
-<?php
+<?php declare(strict_types=1);
 
 use VanCodX\CodingStyle\PhpCsFixer\ConfigCreator;
-use PhpCsFixer\Finder;
 
-$finder = (new Finder())->in(__DIR__);
-
-return ConfigCreator::create()->setFinder($finder);
+$config = ConfigCreator::create();
+$config->getFinder()->in(__DIR__);
+return $config;
 ```
 
 Add the following lines into "composer.json" file of your project:
