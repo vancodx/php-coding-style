@@ -1,8 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 
 use VanCodX\CodingStyle\PhpCsFixer\ConfigCreator;
-use PhpCsFixer\Finder;
 
-$finder = (new Finder())->in(__DIR__);
-
-return ConfigCreator::create()->setFinder($finder);
+$config = ConfigCreator::create();
+$config->getFinder()->in(__DIR__);
+return $config;
