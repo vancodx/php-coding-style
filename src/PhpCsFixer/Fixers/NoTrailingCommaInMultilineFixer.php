@@ -15,11 +15,17 @@ use SplFileInfo;
  */
 class NoTrailingCommaInMultilineFixer implements FixerInterface
 {
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return 'VanCodX/no_trailing_comma_in_multiline';
     }
 
+    /**
+     * @return FixerDefinitionInterface
+     */
     public function getDefinition(): FixerDefinitionInterface
     {
         return new FixerDefinition(
@@ -28,21 +34,35 @@ class NoTrailingCommaInMultilineFixer implements FixerInterface
         );
     }
 
+    /**
+     * @return bool
+     */
     public function isRisky(): bool
     {
         return false;
     }
 
+    /**
+     * @return int
+     */
     public function getPriority(): int
     {
         return 0;
     }
 
+    /**
+     * @param SplFileInfo $file
+     * @return bool
+     */
     public function supports(SplFileInfo $file): bool
     {
         return ($file->getExtension() === 'php');
     }
 
+    /**
+     * @param Tokens $tokens
+     * @return bool
+     */
     public function isCandidate(Tokens $tokens): bool
     {
         return $tokens->isTokenKindFound(',')
@@ -54,6 +74,11 @@ class NoTrailingCommaInMultilineFixer implements FixerInterface
             ]);
     }
 
+    /**
+     * @param SplFileInfo $file
+     * @param Tokens $tokens
+     * @return void
+     */
     public function fix(SplFileInfo $file, Tokens $tokens): void
     {
         for ($index = $tokens->count() - 1; $index >= 0; --$index) {
