@@ -16,6 +16,8 @@ class RuleSet
 
             'ordered_imports' => ['imports_order' => ['class', 'function', 'const'], 'sort_algorithm' => 'alpha'],
 
+            'type_declaration_spaces' => true,
+
             'array_syntax' => ['syntax' => 'short'],
             'no_trailing_comma_in_singleline' => true,
             'VanCodX/no_trailing_comma_in_multiline' => true,
