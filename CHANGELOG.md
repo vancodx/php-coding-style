@@ -5,4 +5,5 @@ Change Log
 -----
 
 ### Fixed:
+
 * RuleSet now contains "type_declaration_spaces" rule.
